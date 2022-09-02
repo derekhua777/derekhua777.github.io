@@ -414,8 +414,8 @@ footer {
   }
 
   .project-pic {
-    width: 80%;
-    height: auto;
+    width: auto;
+    height: 100%;
   }
 
   .contact-form-container {
