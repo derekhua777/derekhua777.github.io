@@ -413,6 +413,11 @@ footer {
     height: auto;
   }
 
+  .project-pic {
+    width: 80%;
+    height: auto;
+  }
+
   .contact-form-container {
     max-width: 23.75rem;
   }
