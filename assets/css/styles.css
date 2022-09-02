@@ -410,6 +410,7 @@ footer {
 
   .project-container {
     width: 20.875rem;
+    height: auto;
   }
 
   .contact-form-container {
