@@ -27,6 +27,44 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <title>Derek Hua | UCLA Computer Engineering</title>
+    <style>
+      .image-container {
+          position: relative;
+          display: inline-block;
+          width: 200px;
+          height: 200px;
+      }
+
+      .image {
+          display: block;
+          width: 200px;
+          height: 200px;
+          transition: 0.3s;
+      }
+
+      .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          background-color: rgba(0, 0, 0, 0.5);
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: 0.3s;
+      }
+
+      .image-container:hover .image {
+          filter: brightness(70%);
+      }
+
+      .image-container:hover .overlay {
+          opacity: 1;
+      }
+    </style>
   </head>
 
   <body>
@@ -56,9 +94,11 @@
       <div class="bio animate__animated animate__shakeX">
         <h2 class="bio-title">About Me</h2>
         <p class="bio-text">
-          I am a senior studying computer engineering at UCLA.
-          I have always loved creating with my hands from Legos to now building full stack projects.
-          In my free time I love playing the saxophone, going to the gym, and playing Valorant!
+          Hello! I'm Derek, a senior in computer engineering at UCLA.
+          As an undergrad researcher at the Networked and Embedded Systems Laboratory, 
+          I explore various machine learning architectures. 
+          Last summer I interned at Lockheed Martin as an AI engineer, focusing on unsupervised computer vision models. 
+          In my free time, you'll find me going to concerts, playing the sax, or hitting the gym!
           </p>
       </div>
     </section>
@@ -88,47 +128,47 @@
       <h2 class="skill-header">Technologies I Work With</h2>
 
       <div class="skills-wrapper">
-        <div class="first-set animate__animated animate__pulse">
-          <img
-            src="assets/icons/c++-logo.png"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="assets/icons/python-logo.png"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="assets/icons/java-logo.png"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-        </div>
+          <div class="first-set animate__animated animate__pulse">
+              <div class="image-container">
+                  <img src="assets/icons/c++-logo.png" alt="" loading="lazy" class="image" />
+                  <div class="overlay">
+                      <p>C++</p>
+                  </div>
+              </div>
+              <div class="image-container">
+                  <img src="assets/icons/python-logo.png" alt="" loading="lazy" class="image" />
+                  <div class="overlay">
+                      <p>Python</p>
+                  </div>
+              </div>
+              <div class="image-container">
+                  <img src="assets/icons/tensorflow-logo.png" alt="" loading="lazy" class="image" />
+                  <div class="overlay">
+                      <p>Tensorflow</p>
+                  </div>
+              </div>
+          </div>
 
-        <div class="second-set animate__animated animate__pulse">
-          <img
-            src="assets/icons/node-logo.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="assets/icons/icons8-react-native.svg"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-            src="assets/icons/pytorch-logo.png"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-        </div>
+          <div class="second-set animate__animated animate__pulse">
+              <div class="image-container">
+                  <img src="assets/icons/node-logo.svg" alt="" loading="lazy" class="image" />
+                  <div class="overlay">
+                      <p>Node.js</p>
+                  </div>
+              </div>
+              <div class="image-container">
+                  <img src="assets/icons/icons8-react-native.svg" alt="" loading="lazy" class="image" />
+                  <div class="overlay">
+                      <p>React</p>
+                  </div>
+              </div>
+              <div class="image-container">
+                  <img src="assets/icons/pytorch-logo.png" alt="" loading="lazy" class="image" />
+                  <div class="overlay">
+                      <p>PyTorch</p>
+                  </div>
+              </div>
+          </div>
       </div>
     </section>
 
@@ -173,12 +213,6 @@
             class="project-video"
             ></iframe>
           
-          <!--img
-            src="assets/images/netflixClone.png"
-            alt="netflic-clone"
-            loading="lazy"
-            class="project-pic"
-          /-->
           <h3 class="project-title">Micromouse- Maze Solving Robot</h3>
           <p class="project-details">
             As part of the American Micromouse Competition, my partner and I created an autonomous maze solving robot.
@@ -232,7 +266,7 @@
             loading="lazy"
             class="project-pic"
           />
-          <h3 class="project-title">Cooking Ingredient Classifier</h3>
+          <h3 class="project-title">Snap Cook</h3>
           <p class="project-details">
             I designed a Convoultional Neural Network in Pytorch to perform visual recognition on cooking ingredients reaching a test accuracy of 96%. 
             Based on the given ingredients, a few recommended recipes containing those ingredients are displayed to the user.
