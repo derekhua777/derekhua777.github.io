@@ -2,7 +2,9 @@
 
 /* Variables */
 :root {
-  --font-family: "Roboto", sans-serf;
+  /*--font-family: "Roboto", sans-serf; */
+  --font-family: 'Courier New', monospace;
+
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
@@ -45,11 +47,6 @@ a:hover {
 
 body {
   font-family: var(--font-family);
-}
-
-section {
-  /* max-width: 1100px;
-  margin: auto; */
 }
 
 /* CSS Resets end */
@@ -116,7 +113,7 @@ nav ul li {
 }
 
 .bio {
-  width: 25rem;
+  width: 35rem;
   padding: 0.625rem;
   border-radius: 6px;
   box-shadow: 0px 2px 15px 2px var(--primary-shadow);
@@ -186,7 +183,7 @@ nav ul li {
 }
 
 .project-video {
-  width: 100%;
+  width: auto;
   height: 57%;
 }
 
@@ -206,6 +203,7 @@ nav ul li {
   width: 28rem;
   height: 28rem;
   padding: 1rem;
+  overflow: auto;
 }
 
 .project-container p {
@@ -218,6 +216,7 @@ nav ul li {
 
 .project-details {
   margin-bottom: var(--bottom-margin);
+  word-wrap: break-word; 
 }
 
 /* Projects section ends */
@@ -399,6 +398,7 @@ footer {
   .project-container {
     width: 20.875rem;
     height: auto;
+    flex-direction: column;
   }
 
   .project-pic {
